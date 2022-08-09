@@ -1,0 +1,265 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap");
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body, html {
+  line-height: 1;
+  width: 100vw;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+.ui-input-text {
+  width: 80%;
+}
+
+.g-24 {
+  display: grid;
+  grid-template-columns: repeat(24, 1fr);
+}
+
+body {
+  width: 100vw;
+  overflow-x: hidden;
+}
+
+.header {
+  display: grid;
+  grid-template-columns: repeat(24, 1fr);
+  padding-top: 30px;
+  position: absolute;
+  width: 100%;
+  z-index: 1;
+}
+.header__wrap {
+  grid-column: 3/span 20;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.header__wrap__logo img {
+  width: 60%;
+}
+.header__wrap nav ul {
+  display: flex;
+  flex-direction: row;
+  gap: 50px;
+}
+.header__wrap nav ul li a {
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  color: #000;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.header__wrap nav ul li a::after {
+  content: "";
+  width: 0;
+  height: 1.5px;
+  background: #000;
+  transition: 300ms ease-in-out;
+}
+.header__wrap nav ul li a:hover::after {
+  width: 100%;
+}
+
+.footer {
+  display: grid;
+  grid-template-columns: repeat(24, 1fr);
+  background: #7755D1;
+}
+.footer-information {
+  grid-column: 3/span 10;
+  padding: 30px 0;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 60px;
+}
+.footer-information a img {
+  width: 60%;
+}
+.footer-information__contact {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  color: #fff;
+}
+.footer-information__contact nav ul {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.footer-information__contact nav ul li {
+  width: fit-content;
+}
+.footer-information__contact nav ul li a {
+  color: #fff;
+  font-weight: 300;
+  display: flex;
+  flex-direction: column;
+}
+.footer-information__contact nav ul li a::after {
+  content: "";
+  margin-top: 5px;
+  width: 0;
+  height: 1.5px;
+  background: #fff;
+  transition: 300ms ease-in-out;
+}
+.footer-information__contact nav ul li a:hover::after {
+  width: 100%;
+}
+.footer-social {
+  grid-column: span 12;
+  background: #886FF4;
+  padding: 30px 60px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.footer-social__title {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  color: #fff;
+}
+.footer-social__link {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+
+.main-homepage {
+  width: 100vw;
+  height: 90vh;
+  z-index: -1;
+  overflow: hidden;
+}
+.main-homepage__toshop {
+  grid-column: span 12;
+  height: 100%;
+  background: url("../img/home/damier.webp");
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-top: 30px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+}
+.main-homepage__toshop img {
+  width: 85%;
+  position: relative;
+  left: 30%;
+  z-index: 1;
+}
+@media (max-width: 1024px) {
+  .main-homepage__toshop img {
+    width: 100%;
+  }
+}
+.main-homepage__glassmorph {
+  position: relative;
+  grid-column: span 12;
+  height: 100%;
+  background: url("../img/home/glass-bg.png"), linear-gradient(-90deg, #7755D1 30%, transparent 100%);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.main-homepage__glassmorph::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: linear-gradient(-90deg, rgba(255, 255, 255, 0.5) 20%, transparent 80%);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+}
+.main-homepage__glassmorph-presentation {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0 60px 0 140px;
+}
+.main-homepage__glassmorph-presentation .wrap-presentation {
+  z-index: 2;
+  padding: 20px;
+  font-family: "roboto", sans-serif;
+  color: #000;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.main-homepage__glassmorph-presentation .wrap-presentation h1 {
+  font-weight: 800;
+  font-size: 60px;
+}
+@media (max-width: 1024px) {
+  .main-homepage__glassmorph-presentation .wrap-presentation h1 {
+    font-size: 50px;
+  }
+}
+.main-homepage__glassmorph-presentation .wrap-presentation h6 {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.2em;
+  letter-spacing: 0.5px;
+}
+.main-homepage__glassmorph-presentation .wrap-presentation h5 {
+  font-size: 20px;
+}

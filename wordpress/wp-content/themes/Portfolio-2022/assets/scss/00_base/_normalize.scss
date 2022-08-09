@@ -1,0 +1,9 @@
+.g-24{
+    display: grid;
+    grid-template-columns: repeat(24,1fr);
+}
+
+body{
+    width: 100vw;
+    overflow-x: hidden;
+}
